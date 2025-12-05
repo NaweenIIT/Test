@@ -13,6 +13,22 @@ import { RouterModule } from "@angular/router";
       :host {
         display: block;
       }
+
+      @media (max-width: 767px) {
+        nav {
+          border-radius: 24px 24px 0 0;
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+      }
+
+      @media (min-width: 768px) {
+        nav {
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 24px;
+          border-top-right-radius: 24px;
+        }
+      }
     `,
   ],
 })
