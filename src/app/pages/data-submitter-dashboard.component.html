@@ -221,25 +221,25 @@
                 *ngFor="let tab of taskTabs"
                 [class.bg-white]="tab.active"
                 [class.shadow-card]="tab.active"
-                class="flex items-center gap-2 px-6 py-2 rounded-full whitespace-nowrap transition-all"
+                class="flex items-center gap-1 sm:gap-2 px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 rounded-full whitespace-nowrap transition-all flex-shrink-0"
               >
                 <span
                   [class.text-primary-600]="tab.active"
                   [class.text-gray-700]="!tab.active"
                   [class.font-semibold]="tab.active"
                   [class.font-medium]="!tab.active"
-                  class="text-lg font-['Poppins'] capitalize"
+                  class="text-xs sm:text-sm md:text-base lg:text-lg font-['Poppins'] capitalize"
                   >{{ tab.label }}</span
                 >
                 <div
-                  class="px-2 py-0.5 rounded"
+                  class="px-1.5 sm:px-2 py-0.5 rounded text-[10px] sm:text-xs md:text-sm"
                   [class.bg-gradient-to-r]="tab.active"
                   [class.from-red-500]="tab.active"
                   [class.to-primary-600]="tab.active"
                   [class.bg-primary-500]="!tab.active"
                 >
                   <span
-                    class="text-white text-lg font-medium font-['Poppins']"
+                    class="text-white font-medium font-['Poppins']"
                     >{{ tab.count }}</span
                   >
                 </div>
