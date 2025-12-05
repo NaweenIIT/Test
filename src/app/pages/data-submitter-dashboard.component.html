@@ -1,21 +1,21 @@
 <div class="min-h-screen bg-gray-100">
       <!-- Header -->
       <header
-        class="bg-white shadow-custom rounded-lg mx-4 lg:mx-5 mt-6 lg:mt-7 px-4 lg:px-6 py-3 lg:py-4"
+        class="bg-white shadow-custom rounded-lg mx-3 sm:mx-4 md:mx-5 mt-4 sm:mt-5 md:mt-6 lg:mt-7 px-3 sm:px-4 md:px-6 py-2.5 sm:py-3 md:py-4"
       >
-        <div class="flex items-center justify-between">
+        <div class="flex items-center justify-between gap-2 md:gap-4">
           <h1
-            class="text-gray-900 text-base lg:text-lg font-medium font-['Poppins'] capitalize"
+            class="text-gray-900 text-sm sm:text-base md:text-lg font-medium font-['Poppins'] capitalize flex-shrink-0"
           >
             Dashboard
           </h1>
 
-          <!-- Search Bar (Hidden on mobile) -->
+          <!-- Search Bar (Hidden on smaller screens) -->
           <div
-            class="hidden md:flex items-center gap-2 bg-gray-50 rounded px-3 py-2 w-96"
+            class="hidden lg:flex items-center gap-2 bg-gray-50 rounded px-3 py-2 min-w-0 flex-1 max-w-xs"
           >
             <svg
-              class="w-4 h-4 fill-gray-600 opacity-90"
+              class="w-4 h-4 fill-gray-600 opacity-90 flex-shrink-0"
               viewBox="0 0 15 15"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -26,7 +26,7 @@
             <input
               type="text"
               placeholder="Search"
-              class="bg-transparent text-sm text-gray-600 font-light font-['Poppins'] outline-none flex-1"
+              class="bg-transparent text-xs sm:text-sm text-gray-600 font-light font-['Poppins'] outline-none flex-1 min-w-0"
             />
           </div>
 
