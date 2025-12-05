@@ -1,4 +1,10 @@
-import { Component, Input, HostListener, OnInit, OnDestroy } from "@angular/core";
+import {
+  Component,
+  Input,
+  HostListener,
+  OnInit,
+  OnDestroy,
+} from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { RouterModule } from "@angular/router";
 
