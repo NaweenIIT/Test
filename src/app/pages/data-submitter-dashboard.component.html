@@ -247,28 +247,28 @@
             </div>
 
             <!-- Task Items -->
-            <div class="space-y-4">
+            <div class="space-y-3 md:space-y-4">
               <div
                 *ngFor="let task of tasks"
-                class="flex justify-between items-center p-4 rounded-lg bg-gray-50"
+                class="flex flex-col md:flex-row md:justify-between md:items-center p-3 md:p-4 rounded-lg bg-gray-50"
                 [class.border-l-4]="true"
                 [style.border-left-color]="task.borderColor"
               >
-                <div class="flex-1">
+                <div class="flex-1 min-w-0 mb-3 md:mb-0">
                   <h4
-                    class="text-gray-800 text-base font-medium font-['Poppins'] capitalize mb-2"
+                    class="text-gray-800 text-sm md:text-base font-medium font-['Poppins'] capitalize mb-1 md:mb-2"
                   >
                     {{ task.title }}
                   </h4>
                   <p
-                    class="text-gray-800 text-sm font-normal font-['Poppins'] capitalize mb-3"
+                    class="text-gray-800 text-xs md:text-sm font-normal font-['Poppins'] capitalize mb-2 md:mb-3 break-words"
                   >
                     {{ task.details }}
                   </p>
-                  <div class="flex gap-2">
+                  <div class="flex flex-wrap gap-2">
                     <span
                       *ngFor="let tag of task.tags"
-                      class="px-2 py-1 rounded text-[10px] font-normal font-['Poppins'] capitalize border"
+                      class="px-2 py-1 rounded text-[9px] md:text-[10px] font-normal font-['Poppins'] capitalize border whitespace-nowrap"
                       [style.color]="tag.color"
                       [style.border-color]="tag.color"
                       [style.background]="tag.bg"
@@ -277,23 +277,23 @@
                     </span>
                   </div>
                 </div>
-                <div class="flex items-center gap-3 ml-4">
+                <div class="flex items-center gap-2 md:gap-3 ml-0 md:ml-4 flex-wrap md:flex-nowrap md:flex-shrink-0">
                   <button
                     *ngFor="let action of task.actions"
-                    class="flex items-center gap-2 px-4 py-2 rounded-lg transition-colors"
+                    class="flex items-center gap-2 px-2 md:px-4 py-1.5 md:py-2 rounded-lg transition-colors text-xs md:text-sm whitespace-nowrap flex-shrink-0"
                     [class.bg-white]="action.style === 'white'"
                     [class.bg-teal-500]="action.style === 'teal'"
                     [class.hover:bg-gray-100]="action.style === 'white'"
                     [class.hover:bg-teal-600]="action.style === 'teal'"
                   >
                     <span
-                      class="text-sm font-normal font-['Poppins'] capitalize"
+                      class="font-normal font-['Poppins'] capitalize hidden sm:inline"
                       [class.text-gray-900]="action.style === 'white'"
                       [class.text-white]="action.style === 'teal'"
                     >
                       {{ action.label }}
                     </span>
-                    <img [src]="action.icon" alt="" class="w-5 h-5" />
+                    <img [src]="action.icon" alt="" class="w-4 md:w-5 h-4 md:h-5" />
                   </button>
                 </div>
               </div>
