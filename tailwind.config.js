@@ -3,6 +3,15 @@ module.exports = {
   content: ["./src/**/*.{html,ts}", "./src/**/*.html", "./src/**/*.ts"],
   theme: {
     extend: {
+      screens: {
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+        '2xl': '1366px',
+        '3xl': '1536px',
+        '4xl': '1920px',
+      },
       fontFamily: {
         sans: ['Poppins', 'system-ui', 'sans-serif'],
       },
