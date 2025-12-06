@@ -4,6 +4,7 @@ import { RouterModule } from "@angular/router";
 import { DataSubmitterNavigationComponent } from "../components/data-submitter-navigation.component";
 import { TemplateManualModalComponent } from "../components/template-manual-modal.component";
 import { RejectionModalComponent } from "../components/rejection-modal.component";
+import { HistoryModalComponent } from "../components/history-modal.component";
 
 @Component({
   selector: "app-rejected-submission",
@@ -14,12 +15,14 @@ import { RejectionModalComponent } from "../components/rejection-modal.component
     DataSubmitterNavigationComponent,
     TemplateManualModalComponent,
     RejectionModalComponent,
+    HistoryModalComponent,
   ],
   templateUrl: "./rejected-submission.component.html",
 })
 export class RejectedSubmissionComponent {
   showManualModal = false;
   showRejectionModal = false;
+  showHistoryModal = false;
   selectedSubmission: any = null;
 
   rejectedSubmissions = [
@@ -95,7 +98,8 @@ export class RejectedSubmissionComponent {
   }
 
   onHistory(submission: any) {
-    console.log("View history:", submission);
+    this.selectedSubmission = submission;
+    this.showHistoryModal = true;
   }
 
   onDownload(submission: any) {
